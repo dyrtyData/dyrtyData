@@ -1,4 +1,6 @@
-## Hi there 👋
+## 🚀 Open Source Contributions
+
+* **[NVIDIA/garak](https://github.com/NVIDIA/garak)** • [PR #1379](https://github.com/NVIDIA/garak/pull/1379): Architected and implemented the core WebSocket generator module using the `websockets` library, expanding LLM vulnerability scanning capabilities to support real-time, bidirectional chat architectures with full authentication handling.
 
 <!--
 **dyrtyData/dyrtyData** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
