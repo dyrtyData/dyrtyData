@@ -13,6 +13,17 @@ An end-to-end open-source ML pipeline built on the **ESA Anomaly Dataset (ESA-AD
 
 * **[NVIDIA/garak](https://github.com/NVIDIA/garak)** • [PR #1379](https://github.com/NVIDIA/garak/pull/1379): Architected and implemented the core WebSocket generator module using the `websockets` library, expanding LLM vulnerability scanning capabilities to support real-time, bidirectional chat architectures with full authentication handling.
 
+* **[JoshuaC215/agent-service-toolkit](https://github.com/JoshuaC215/agent-service-toolkit)** • [PR #258](https://github.com/JoshuaC215/agent-service-toolkit/pull/258): Resolved a critical asynchronous streaming exception (`RuntimeError: generator didn't stop after athrow()`) occurring when Claude models yield empty string tokens immediately prior to tool execution payloads, stabilizing production UI/Streamlit integrations.
+
+
+
+## 📄 Publications & Whitepapers
+
+### 📊 [Long-Term Care (LTC) Deal Valuation Tool Architecture](https://proltc.levinassociates.com/LTC_Deal_Valuation_Tool_Whitepaper.pdf)
+*Author / Lead Architect* * Designed and documented the technical framework for an institutional valuation platform tracking complex transaction metrics, regulatory risk vectors, and market datasets within the healthcare sector.
+* Outlined quantitative methodology for normalizing disparate healthcare operational matrices into deterministic financial evaluation paths.
+
+
 <!--
 **dyrtyData/dyrtyData** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
