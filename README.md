@@ -13,6 +13,12 @@ A fork of LatticeFlow/ETH/INSAIT's **COMPL-AI** that turns an EU-AI-Act evaluati
 * **The Breakthrough:** Designed a **same-model EU↔Brazil delta** (two benchmarks reuse the *exact same scorer*, isolating language + legal framing from raw model strength). Across **six models from five developers (8B → frontier), all six disclosed being an AI ~95–100% of the time in English but only ~50–55% in Portuguese under Brazilian law** — a **~0.45 compliance gap invisible to any English benchmark** — packaged as a per-article HTML scorecard that doubles as the Art. 28 "public conclusions" artifact.
 * **Stack:** Python, Inspect AI, Anthropic API + Ollama (local, $0), deterministic rubric scorers, pandoc/XeLaTeX reporting.
 
+### 🪤 [vectox — Sleeper-Agent RAG Memory-Poisoning Sandbox](https://github.com/dyrtyData/vectox)
+A red-teaming sandbox demonstrating that a handful of dormant, benign-looking documents seeded into a RAG vector store act as an **inference-time sleeper agent**—invisible until a trigger query retrieves them and hijacks the model's output, with **no weight access required**. Built for the **Global South AI Safety Hackathon** (Latin America · Technical Safety sub-track).
+* **The Architecture:** Authored a new NVIDIA **garak** `rag_poisoning` probe + paired detector driving a live **PostgreSQL `pgvector(384)` + HNSW-cosine** RAG victim over both in-process and **WebSocket** transports (reusing my merged garak [PR #1379](https://github.com/NVIDIA/garak/pull/1379)). Seeded with Latin-American poison derived *structurally* from the **SESGO** Spanish stereotype benchmark plus a Spanish–English **code-switching** evasion variant.
+* **The Breakthrough:** Across six bias dimensions and two languages, 24 dormant poisons among 224 documents reached **100% attack success**; adding an insertion-time `BEFORE INSERT` quarantine gate dropped it to **0%** with no change to the attack—a two-sided attack-and-defense result instantiating "audit memory writes before they hit the retrieval hot path."
+* **Stack:** Python, NVIDIA garak, PostgreSQL/pgvector, HNSW, sentence-transformers (all-MiniLM-L6-v2), Ollama (local LLM target), Matplotlib, pytest.
+
 ## 🚀 Open Source Contributions
 
 * **[NVIDIA/garak](https://github.com/NVIDIA/garak)** • [PR #1379](https://github.com/NVIDIA/garak/pull/1379): Architected and implemented the core WebSocket generator module using the `websockets` library, expanding LLM vulnerability scanning capabilities to support real-time, bidirectional chat architectures with full authentication handling.
