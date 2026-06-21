@@ -7,7 +7,11 @@ An end-to-end open-source ML pipeline built on the **ESA Anomaly Dataset (ESA-AD
 * **The Breakthrough:** Conducted a comprehensive 13-approach benchmark showing that while fine-tuned LLMs alone struggled with over-flagging calibration artifacts, a multi-modal fused stacker achieved a state-of-the-art **$CEF_{0.5}$ score of 0.781**—proving that ensemble detection coupled with LLM advisory logic yields the highest operational reliability.
 * **Stack:** Python, PyTorch, QLoRA, GGUF/llama.cpp (Local Metal Inference), Scikit-Learn, Time-Series LSTMs.
 
-
+### ⚖️ [vigilAI — Auditing LLM Compliance with Brazil's PL 2338/2023](https://github.com/dyrtyData/vigilAI)
+A fork of LatticeFlow/ETH/INSAIT's **COMPL-AI** that turns an EU-AI-Act evaluation suite into the first **compliance benchmark for a Global-South AI statute** — Brazil's AI bill, PL 2338/2023 (Senate-approved Dec. 2024).
+* **The Architecture:** Preserved all 30 original EU benchmarks on **Inspect AI** and layered on **five Brazil-specific benchmarks** mapped to the bill's Chapter II rights — AI disclosure (Art. 5, I), non-discrimination across **IBGE** racial/regional/intersectional categories (Art. 5, III), the full high-risk rights triad of **explanation, contestation, and human review** (Art. 6, I–III), and the Algorithmic Impact Assessment (Arts. 25–28) — scored with deterministic, multilingual (pt-BR/EN) rubric detectors (no LLM judge).
+* **The Breakthrough:** Designed a **same-model EU↔Brazil delta** (two benchmarks reuse the *exact same scorer*, isolating language + legal framing from raw model strength). Across **six models from five developers (8B → frontier), all six disclosed being an AI ~95–100% of the time in English but only ~50–55% in Portuguese under Brazilian law** — a **~0.45 compliance gap invisible to any English benchmark** — packaged as a per-article HTML scorecard that doubles as the Art. 28 "public conclusions" artifact.
+* **Stack:** Python, Inspect AI, Anthropic API + Ollama (local, $0), deterministic rubric scorers, pandoc/XeLaTeX reporting.
 
 ## 🚀 Open Source Contributions
 
