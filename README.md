@@ -14,6 +14,13 @@ An end-to-end open-source ML pipeline built on the **ESA Anomaly Dataset (ESA-AD
 * **The Breakthrough:** Conducted a comprehensive 13-approach benchmark showing that while fine-tuned LLMs alone struggled with over-flagging calibration artifacts, a multi-modal fused stacker achieved a state-of-the-art **$CEF_{0.5}$ score of 0.781**—proving that ensemble detection coupled with LLM advisory logic yields the highest operational reliability.
 * **Stack:** Python, PyTorch, QLoRA, GGUF/llama.cpp (Local Metal Inference), Scikit-Learn, Time-Series LSTMs.
 
+### ☀️ [mini-FOXES — Intrinsic XAI Vision Transformer](https://github.com/dyrtyData/space-telemetry-anom-llm)
+A from-scratch Vision Transformer built to demonstrate raw mechanism engineering and Explainable AI (XAI), bypassing black-box weights to regress GOES soft-X-ray flux directly from 7-channel SDO/AIA solar EUV imagery.
+
+* **The Architecture:** Engineered a mechanism-faithful reproduction of the FOXES model (Goodwin et al. 2026). Bypassed standard CLS tokens in favor of an intrinsic spatial-XAI head featuring an 8×8 patch embed and a 9×9 inverted non-local attention mask.
+* **The Breakthrough:** Solved the vision black-box problem by ensuring every prediction serves as its own attribution map, where per-patch predictions sum exactly to the global flux. Achieved a Pearson correlation of $r = 0.943$ and an MAE of 0.368 dex (outperforming the baseline by ~47%), while proving extreme compute efficiency by training on a single local RTX 4090 in just 17 minutes.
+* **Stack:** Python, PyTorch (Custom ViT Architecture), Explainable AI (XAI), SDO/AIA Imagery.
+
 ### ⚖️ [vigilAI — Auditing LLM Compliance with Brazil's PL 2338/2023](https://github.com/dyrtyData/vigilAI)
 A fork of LatticeFlow/ETH/INSAIT's **COMPL-AI** that turns an EU-AI-Act evaluation suite into the first **compliance benchmark for a Global-South AI statute** — Brazil's AI bill, PL 2338/2023 (Senate-approved Dec. 2024).
 * **The Architecture:** Preserved all 30 original EU benchmarks on **Inspect AI** and layered on **five Brazil-specific benchmarks** mapped to the bill's Chapter II rights — AI disclosure (Art. 5, I), non-discrimination across **IBGE** racial/regional/intersectional categories (Art. 5, III), the full high-risk rights triad of **explanation, contestation, and human review** (Art. 6, I–III), and the Algorithmic Impact Assessment (Arts. 25–28) — scored with deterministic, multilingual (pt-BR/EN) rubric detectors (no LLM judge).
