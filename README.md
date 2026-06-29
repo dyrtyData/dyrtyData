@@ -3,9 +3,9 @@
 ### 👑 [Sovereign CTO Stack — Autonomous AI Engineering Orchestrator](https://github.com/dyrtyData/sovereign-cto-stack)
 An open-source, multi-agent orchestration framework (AGPLv3) designed to automate the cognitive load of engineering management and bridge the gap between high-level strategy and day-to-day execution.
 
-* **The Architecture:** Engineered the "Hermes" orchestrator, leveraging the **Model Context Protocol (MCP)** and **Mem0** to create a persistent, context-aware RAG brain over the repository's corpus, delivering real-time executive alerts via Telegram.
-* **The Breakthrough:** Designed autonomous, background-running loops for executive oversight. Fused a continuous technical debt auditor (GraphRAG + SonarQube routing straight to **Linear** tickets) with real-world Product-Market Fit (PMF) research, utilizing RICE-scoring and **Stripe**-grounded AARRR revenue/retention analytics. 
-* **Stack:** Python, GraphRAG, Mem0, MCP, Stripe API, Linear API, SonarQube, Telegram API.
+* **The Architecture:** Engineered the "Hermes" orchestrator, leveraging the **Model Context Protocol (MCP)** and **Mem0** to create a persistent, context-aware RAG brain over the repository's corpus. Secured the agentic network layer using **NVIDIA OpenShell (NemoClaw)** for strict, deny-by-default egress hardening, ensuring safe autonomous tool execution while routing executive alerts via Telegram.
+* **The Breakthrough:** Designed autonomous, background-running loops for executive oversight. Fused a continuous technical debt auditor (GraphRAG + SonarQube) that routes context-rich tickets into **Linear**. These tickets feed directly into **HumanLayer** for human-in-the-loop (HITL) approval on brownfield maintenance, establishing the architectural groundwork for future **OpenHands** integrations to drive fully autonomous greenfield development.
+* **Stack:** Python, GraphRAG, Mem0, MCP, NVIDIA NemoClaw, HumanLayer, OpenHands, Stripe API, Linear API, SonarQube, Telegram API.
 
 ### 🛰️ [STAR-Pipeline — Space Telemetry Anomaly Detection & Resolution](https://github.com/dyrtyData/space-telemetry-anom-llm)
 An end-to-end open-source ML pipeline built on the **ESA Anomaly Dataset (ESA-AD)** that combines time-series anomaly detection with LLM-generated diagnostic reasoning.
