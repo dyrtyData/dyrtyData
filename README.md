@@ -7,6 +7,13 @@ An open-source, multi-agent orchestration framework (AGPLv3) designed to automat
 * **The Breakthrough:** Designed autonomous, background-running loops for executive oversight. Fused a continuous technical debt auditor (GraphRAG + SonarQube) that routes context-rich tickets into **Linear**. These tickets feed directly into **HumanLayer** for human-in-the-loop (HITL) approval on brownfield maintenance, establishing the architectural groundwork for future **OpenHands** integrations to drive fully autonomous greenfield development.
 * **Stack:** Python, GraphRAG, Mem0, MCP, NVIDIA NemoClaw, HumanLayer, OpenHands, Stripe API, Linear API, SonarQube, Telegram API.
 
+### 🕸️ [ThreatGraph — Autonomous Threat-Intel Attack Graph Mapper](https://github.com/dyrtyData/threatgraph-attack-mapper)
+A multi-agent LangGraph pipeline that turns unstructured threat-intel text into a MITRE ATT&CK-grounded attack graph and a structurally validated defensive configuration — engineered to demonstrate the full shape of a production multi-agent system, not a single prompt in a chat loop.
+
+* **The Architecture:** Engineered a five-node `guard_input → retrieve → extractor → graph_architect → defensive_guardrail` state graph over a hybrid RAG retriever — BM25 + dense Chroma fused via weighted Reciprocal Rank Fusion, then cross-encoder reranked — grounding every extracted technique and mitigation in a live ~700-record MITRE ATT&CK corpus. Layered in hosted Mem0 long-term memory, a Guardrails AI schema-validated output gate, and a prompt-injection input classifier, all fail-open by design, with full Langfuse tracing across every node.
+* **The Breakthrough:** Diagnosed and fixed a retrieval-diversity collapse — a single-query cross-encoder rerank was silently discarding multi-stage kill-chains down to one dominant technique; reordering the pipeline so RRF fusion owns recall/diversity and the cross-encoder only reranks a wide window restored full multi-tactic extraction. A Langfuse dataset + SDK-evaluator experiment then measured it: **1.00 mitigation faithfulness**, **0.71 technique-id F1** against a hand-labeled eval set — shipped through three interchangeable UIs (Streamlit, React/Tailwind, Open WebUI) off one backend.
+* **Stack:** Python, LangGraph, FastAPI, Chroma, BM25, Sentence-Transformers cross-encoder, Mem0, Guardrails AI, Langfuse, React, Vite, Tailwind CSS, Open WebUI.
+
 ### 🛰️ [STAR-Pipeline — Space Telemetry Anomaly Detection & Resolution](https://github.com/dyrtyData/space-telemetry-anom-llm)
 An end-to-end open-source ML pipeline built on the **ESA Anomaly Dataset (ESA-AD)** that combines time-series anomaly detection with LLM-generated diagnostic reasoning.
 
