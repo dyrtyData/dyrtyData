@@ -40,6 +40,13 @@ A red-teaming sandbox demonstrating that a handful of dormant, benign-looking do
 * **The Breakthrough:** Across six bias dimensions and two languages, 24 dormant poisons among 224 documents reached **100% attack success**; adding an insertion-time `BEFORE INSERT` quarantine gate dropped it to **0%** with no change to the attack—a two-sided attack-and-defense result instantiating "audit memory writes before they hit the retrieval hot path."
 * **Stack:** Python, NVIDIA garak, PostgreSQL/pgvector, HNSW, sentence-transformers (all-MiniLM-L6-v2), Ollama (local LLM target), Matplotlib, pytest.
 
+### 🔐 [VitaPod — Privacy-Preserving Clinical Trial Eligibility via zkML](https://github.com/dyrtyData/VitaPod)
+Built for the **EAG Global Buildathon** (Florianópolis) — *Local AI, Private AI & User-Owned Data* track. A local-first data pod letting patients cryptographically prove they meet clinical-trial eligibility criteria without revealing the underlying biomarker values: the sponsor receives a zk-SNARK and a wallet address, never the health data.
+
+* **The Architecture:** Compiled a deterministic eligibility policy (age, HbA1c, eGFR thresholds) to an ONNX graph and proved it with **EZKL** as a **Halo2 zk-SNARK**, entirely client-side — the browser evaluates the same policy locally for an instant preview, then a local proof pipeline generates the real proof. A generated Solidity verifier plus a `TrialProofRegistry` contract enforce on-chain replay protection (one accepted proof per wallet) and emit only a wallet address and two cryptographic digests — no biomarker values ever appear in the proof, calldata, or event logs.
+* **The Breakthrough:** Deployed and independently re-verified end-to-end on **HashKey Chain Testnet** — bytecode, registry-to-verifier wiring, and a real committed proof (not just the deploy script's word for it) all confirmed via raw RPC/API calls, with both contracts fully source-verified on the block explorer and the verified source re-hashed to match the committed files byte-for-byte. Measured **2.05s proof generation, 27ms on-chain verification**.
+* **Stack:** Python, EZKL, ONNX, Halo2 zk-SNARKs, Solidity, Hardhat, React, Vite, viem/wagmi, Docker, HashKey Chain (EVM L2).
+
 ## 🚀 Open Source Contributions
 
 * **[NVIDIA/garak](https://github.com/NVIDIA/garak)** • [PR #1379](https://github.com/NVIDIA/garak/pull/1379): Architected and implemented the core WebSocket generator module using the `websockets` library, expanding LLM vulnerability scanning capabilities to support real-time, bidirectional chat architectures with full authentication handling.
